@@ -1,0 +1,60 @@
+@use '../base/variables' as *;
+
+.chart {
+    @media only screen and (max-width: 543px) {
+        display: none;
+    }
+    h3 {
+        font-weight: 600;
+        font-size: 28px;
+    }
+}
+
+.legend_1, .legend_2, .legend_3 {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+}
+
+.legend_1 {
+background-color: #FFC59B;
+}
+
+.legend_2 {
+    background-color: #F88C6C; 
+}
+
+.legend_3 {
+    background-color: #E64E21; 
+}
+
+.chart-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    .chart-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 55px;
+        .clock-chart_img {
+            max-width: 20px;
+        }
+    }
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    .legend_colors {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        span {
+            font-size: 12px;
+        }
+    }
+}

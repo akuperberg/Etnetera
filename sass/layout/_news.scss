@@ -1,0 +1,27 @@
+@use '../base/variables' as *;
+
+
+.news-line {
+    background-color: $dark-orange;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 0;
+    color: $white;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 52px;
+    a {
+        color: $white;
+        text-decoration: none;
+        transition: 0.02s ease;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+    &__news {
+        text-align: center;
+    }
+}
+ 

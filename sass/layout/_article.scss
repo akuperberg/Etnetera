@@ -1,0 +1,65 @@
+@use '../base/variables' as *;
+
+.article-about_us h2 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.about-us-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 30px 0 40px 0;
+    @media only screen and (max-width:1300px) {
+        display: block;
+    }
+    img {
+        max-width: 90%;
+        margin-right: 30px;
+        @media only screen and (max-width:1300px) {
+            max-width: 50%;
+        }
+    }
+    .about-us_img {
+        @media only screen and (max-width:1300px) {
+            text-align: center;
+        }
+    }
+    .about-us_p {
+        @media only screen and (min-width:1300px) {
+            margin-right: 10%;   
+        }
+    }
+}
+.tooltip-text {
+    position: relative;
+    &:hover {
+        .tooltip-wrapper {
+            opacity: 1;
+        }
+    }
+}
+.tooltip-wrapper {
+    width: 119px;
+    border-radius: 5px;
+    background-color: $dark-grey;
+    font-size: 14px;
+    color: $white;
+    font-weight: bold;
+    padding: 6px 0;
+    position: absolute;
+    text-align: center;
+    left: 1px;
+    bottom: 25px;
+    opacity: 0;
+    transition: 0.1s ease-out;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: $dark-grey transparent transparent transparent;
+    }
+}
